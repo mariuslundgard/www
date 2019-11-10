@@ -21,7 +21,7 @@ const html = `<!DOCTYPE html>
     <meta property="og:title" content="${data.title}">
     <meta property="og:description" content="${data.description}">
     <meta property="og:url" content="https://mariuslundgard.com/">
-    <meta property="og:image" content="https://mariuslundgard.com/og-image.png">
+    <meta property="og:image" content="https://mariuslundgard.com/static/og-image.png">
     ${fragments.styleTags}
   </head>
   <body>
