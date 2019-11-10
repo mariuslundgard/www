@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "builds": [
+    { "src": "static/**", "use": "@now/static" },
+    { "src": "src/*.ts", "use": "@now/node" }
+  ],
   "routes": [
-    { "src": "/(.*)", "dest": "/$1" },
+    { "src": "/favicon.ico", "dest": "/static/favicon.ico" },
     { "handle": "filesystem" },
-    { "src": "/.*", "status": 404, "dest": "/404.html" }
+    { "src": "/", "dest": "/src/ssr.ts" },
+    { "src": "/.*", "dest": "/src/notFound.ts" }
   ]
 }

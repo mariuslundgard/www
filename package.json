@@ -3,16 +3,24 @@
   "name": "www",
   "version": "1.0.0",
   "description": "My website.",
+  "author": "Marius Lundgård <studio@mariuslundgard.com>",
+  "license": "MIT",
   "main": "package.json",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "build": "echo \"Nothing to build\"",
     "deploy:dev": "now",
     "deploy:prod": "now --prod",
     "dev": "now dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run typecheck",
+    "typecheck": "tsc --noEmit"
   },
-  "author": "Marius Lundgård <studio@mariuslundgard.com>",
-  "license": "MIT",
+  "devDependencies": {
+    "@now/node": "^1.0.2",
+    "typescript": "^3.7.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mariuslundgard/www.git"
