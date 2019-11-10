@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "www",
+  "version": "1.0.0",
+  "description": "My website.",
+  "main": "package.json",
+  "scripts": {
+    "build": "echo \"Nothing to build\"",
+    "deploy:dev": "now",
+    "deploy:prod": "now --prod",
+    "dev": "now dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marius Lundgård <studio@mariuslundgard.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariuslundgard/www.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mariuslundgard/www/issues"
+  },
+  "homepage": "https://github.com/mariuslundgard/www#readme"
+}
