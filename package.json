@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "workspaces": [
+    "studio",
+    "system",
+    "website"
+  ],
+  "name": "mariuslundgard",
+  "version": "1.0.0",
+  "description": "My website.",
+  "author": "Marius Lundgård <studio@mariuslundgard.com>",
+  "license": "MIT",
+  "main": "package.json",
+  "engines": {
+    "node": "10.x"
+  },
+  "scripts": {
+    "build": "lerna run build",
+    "deploy": "now --prod",
+    "dev": "lerna run --parallel dev",
+    "now-dev": "now dev",
+    "test": "yarn typecheck",
+    "typecheck": "lerna run typecheck"
+  },
+  "devDependencies": {
+    "lerna": "^3.18.4",
+    "now": "^16.5.2"
+  }
+}
