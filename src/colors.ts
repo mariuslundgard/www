@@ -13,3 +13,10 @@ export const gray = {
   "800": "#333",
   "900": "#191919"
 };
+
+export default {
+  black,
+  white,
+  yellow,
+  gray
+};

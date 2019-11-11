@@ -17,6 +17,9 @@
     "test": "npm run typecheck",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@popeindustries/lit-html-server": "^1.6.0"
+  },
   "devDependencies": {
     "@now/node": "^1.0.2",
     "typescript": "^3.7.2"
