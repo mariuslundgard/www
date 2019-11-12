@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Marius Lundgård <studio@mariuslundgard.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run typecheck",
+    "typecheck": "tsc --noEmit"
+  }
+}

@@ -1,13 +1,18 @@
 {
   "version": 2,
+  "name": "www",
   "builds": [
-    { "src": "static/**", "use": "@now/static" },
-    { "src": "src/*.ts", "use": "@now/node" }
+    { "src": "studio/package.json", "use": "@now/static-build" },
+    { "src": "www/static/**", "use": "@now/static" },
+    { "src": "www/src/*.ts", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/favicon.ico", "dest": "/static/favicon.ico" },
-    { "handle": "filesystem" },
-    { "src": "/", "dest": "/src/ssr.ts" },
-    { "src": "/.*", "dest": "/src/notFound.ts" }
+    { "src": "/favicon.ico", "dest": "/www/static/favicon.ico" },
+    { "src": "/static/(.*)", "dest": "/www/static/$1" },
+    { "src": "/studio/static/(.*)", "dest": "/studio/static/$1" },
+    { "src": "/studio", "dest": "/studio/index.html" },
+    { "src": "/studio/.*", "dest": "/studio/index.html" },
+    { "src": "/", "dest": "/www/src/ssr.ts" },
+    { "src": "/.*", "dest": "/www/src/notFound.ts" }
   ]
 }

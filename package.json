@@ -10,15 +10,18 @@
     "node": "10.x"
   },
   "scripts": {
-    "build": "echo \"Nothing to build\"",
+    "build": "(cd studio && npm run build)",
     "deploy:dev": "now",
     "deploy:prod": "now --prod",
     "dev": "now dev",
+    "now-build": "npm run build",
+    "postinstall": "(cd studio && npm install) && (cd www && npm install)",
     "test": "npm run typecheck",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "(cd www && npm run typecheck)"
   },
   "devDependencies": {
     "@now/node": "^1.0.2",
+    "@types/node": "^12.12.7",
     "typescript": "^3.7.2"
   },
   "repository": {
