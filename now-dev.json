@@ -1,18 +1,16 @@
 {
   "version": 2,
-  "scope": "mariuslundgard",
-  "name": "www",
   "builds": [
-    { "src": "studio/package.json", "use": "@now/static-build" },
+    { "src": "studio/public/**", "use": "@now/static" },
     { "src": "www/package.json", "use": "@now/static-build" },
     { "src": "www/src/server/*.ts", "use": "@now/node" }
   ],
   "routes": [
     { "src": "/favicon.ico", "dest": "/www/favicon.ico" },
     { "src": "/static/(.*)", "dest": "/www/$1" },
-    { "src": "/studio/static/(.*)", "dest": "/studio/static/$1" },
-    { "src": "/studio", "dest": "/studio/index.html" },
-    { "src": "/studio/.*", "dest": "/studio/index.html" },
+    { "src": "/studio/static/(.*)", "dest": "/studio/public/static/$1" },
+    { "src": "/studio", "dest": "/studio/public/index.html" },
+    { "src": "/studio/.*", "dest": "/studio/public/index.html" },
     { "src": "/", "dest": "/www/src/server/ssr.ts" },
     { "src": "/.*", "dest": "/www/src/server/notFound.ts" }
   ]

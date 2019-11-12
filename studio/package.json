@@ -6,10 +6,12 @@
   "main": "package.json",
   "author": "Marius Lundgård <studio@mariuslundgard.com>",
   "license": "MIT",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "build": "sanity build public -y",
     "dev": "sanity start",
-    "now-build": "sanity build public -y",
     "start": "sanity start",
     "test": "sanity check"
   },
