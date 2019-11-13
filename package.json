@@ -1,6 +1,11 @@
 {
   "private": true,
-  "name": "www",
+  "workspaces": [
+    "studio",
+    "system",
+    "website"
+  ],
+  "name": "mariuslundgard",
   "version": "1.0.0",
   "description": "My website.",
   "author": "Marius Lundgård <studio@mariuslundgard.com>",
@@ -10,23 +15,19 @@
     "node": "10.x"
   },
   "scripts": {
-    "build": "(cd studio && npm run build)",
-    "deploy:dev": "now",
-    "deploy:prod": "now --prod",
-    "dev": "now dev --local-config=now-dev.json",
-    "postinstall": "(cd studio && npm install) && (cd www && npm install)",
-    "test": "npm run typecheck",
-    "typecheck": "(cd www && npm run typecheck)"
+    "build": "lerna run build",
+    "deploy": "now --prod",
+    "dev": "run-p dev:*",
+    "dev:studio": "yarn --cwd studio dev",
+    "dev:system": "yarn --cwd system dev",
+    "dev:website": "now dev --local-config=now-dev.json",
+    "test": "yarn typecheck",
+    "typecheck": "lerna run typecheck"
   },
   "devDependencies": {
+    "lerna": "^3.18.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
     "typescript": "^3.7.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mariuslundgard/www.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mariuslundgard/www/issues"
-  },
-  "homepage": "https://github.com/mariuslundgard/www#readme"
+  }
 }

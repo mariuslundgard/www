@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "studio",
+  "name": "@mariuslundgard/studio",
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
@@ -12,7 +12,6 @@
   "scripts": {
     "build": "sanity build public -y",
     "dev": "sanity start",
-    "start": "sanity start",
     "test": "sanity check"
   },
   "dependencies": {

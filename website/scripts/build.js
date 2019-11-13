@@ -16,17 +16,17 @@ async function rollupBuild() {
   const minify = process.env.NODE_ENV === "production";
   const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
-  // see below for details on the options
   const inputOptions = {
     external: [],
-    input: [path.resolve(SRC_PATH, "browser/main.ts")],
+    input: [
+      path.resolve(SRC_PATH, "browser/main.ts"),
+      path.resolve(SRC_PATH, "browser/preview.ts")
+    ],
     plugins: [
-      // Allows node_modules resolution
       nodeResolve({
         extensions,
         mainFields: ["browser", "module", "main"]
       }),
-      // Allow bundling cjs modules. Rollup doesn't understand cjs
       commonjs(),
       babel({
         babelrc: false,
@@ -51,7 +51,6 @@ async function rollupBuild() {
     }
   ];
 
-  // create a bundle
   const bundle = await rollup.rollup(inputOptions);
 
   return Promise.all(outputOptionsArr.map(outputOptions => bundle.write(outputOptions)));

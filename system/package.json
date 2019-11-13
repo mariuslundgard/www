@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "@mariuslundgard/system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "author": "Marius Lundgård <studio@mariuslundgard.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "prebuild": "rimraf dist",
+    "test": "npm run typecheck",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lit-html": "^1.1.2"
+  }
+}

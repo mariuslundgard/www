@@ -4,16 +4,17 @@
   "name": "www",
   "builds": [
     { "src": "studio/package.json", "use": "@now/static-build" },
-    { "src": "www/package.json", "use": "@now/static-build" },
-    { "src": "www/src/server/*.ts", "use": "@now/node" }
+    { "src": "website/package.json", "use": "@now/static-build" },
+    { "src": "website/src/server/*.ts", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/favicon.ico", "dest": "/www/favicon.ico" },
-    { "src": "/static/(.*)", "dest": "/www/$1" },
+    { "src": "/favicon.ico", "dest": "/website/favicon.ico" },
+    { "src": "/static/(.*)", "dest": "/website/$1" },
     { "src": "/studio/static/(.*)", "dest": "/studio/static/$1" },
     { "src": "/studio", "dest": "/studio/index.html" },
     { "src": "/studio/.*", "dest": "/studio/index.html" },
-    { "src": "/", "dest": "/www/src/server/ssr.ts" },
-    { "src": "/.*", "dest": "/www/src/server/notFound.ts" }
+    { "src": "/preview", "dest": "/website/src/server/preview.ts" },
+    { "src": "/", "dest": "/website/src/server/ssr.ts" },
+    { "src": "/.*", "dest": "/website/src/server/notFound.ts" }
   ]
 }

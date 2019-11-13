@@ -7,6 +7,7 @@ interface Screen {
 
 function resolveScreen(path: string): Promise<Screen> {
   if (path === "/") return import("../screens/home");
+  if (path === "/post") return import("../screens/post");
   return import("../screens/notFound");
 }
 
