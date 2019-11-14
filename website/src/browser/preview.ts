@@ -17,7 +17,15 @@ function renderScreen(data: any) {
     const screenKey = urlParams.get("screen");
 
     if (screenKey === "post") {
-      render(post.Content({ title: data.title, siteName: "ML" }), rootElement);
+      render(
+        post.Content({
+          body: data.body,
+          published: data.published,
+          title: data.title,
+          siteName: "ML"
+        }),
+        rootElement
+      );
     } else {
       render(UnknownScreen(screenKey), rootElement);
     }
