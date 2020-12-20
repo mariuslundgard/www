@@ -34,7 +34,7 @@ export const Content = (_: Props) => {
         </p>
         <!-- <p> Previously I’ve worked with editorial design, data visualization, type design, and advertising.</p> -->
         <p>
-          I work as lead designer at
+          I’m a product designer at
           <a href="https://www.sanity.io" target="_blank" rel="noopener noreferrer">Sanity.io</a>.
         </p>
         <p>
