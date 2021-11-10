@@ -5,15 +5,12 @@
     "system",
     "website"
   ],
-  "name": "mariuslundgard",
+  "name": "www",
   "version": "1.0.0",
   "description": "My website.",
   "author": "Marius Lundgård <studio@mariuslundgard.com>",
   "license": "MIT",
   "main": "package.json",
-  "engines": {
-    "node": "10.x"
-  },
   "scripts": {
     "build": "lerna run build",
     "deploy": "now --prod",

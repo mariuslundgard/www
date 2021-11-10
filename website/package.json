@@ -6,9 +6,6 @@
   "main": "package.json",
   "author": "Marius Lundgård <studio@mariuslundgard.com>",
   "license": "MIT",
-  "engines": {
-    "node": "10.x"
-  },
   "scripts": {
     "build": "node scripts/build",
     "now-build": "(cd ../system && yarn build) && yarn build",
