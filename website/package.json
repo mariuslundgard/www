@@ -7,28 +7,22 @@
   "author": "Marius Lundgård <studio@mariuslundgard.com>",
   "license": "MIT",
   "scripts": {
-    "build": "node scripts/build",
-    "now-build": "(cd ../system && yarn build) && yarn build",
-    "prebuild": "rimraf public",
-    "test": "npm run typecheck",
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint . --ext .js,.jsx,.mjs,.ts,.tsx",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@popeindustries/lit-html-server": "^1.6.0",
-    "lit-html": "^1.1.2",
-    "module-alias": "^2.2.2"
+    "@body-ui/core": "^0.1.1",
+    "@body-ui/layout": "^0.1.1",
+    "@body-ui/theme-default": "^0.1.1",
+    "@body-ui/typography": "^0.1.1",
+    "@vercel/node": "^1.12.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typestyle": "^2.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/preset-typescript": "^7.7.2",
-    "@now/node": "^1.1.0",
-    "@types/node": "^12.12.7",
-    "cpx": "^1.5.0",
-    "rollup": "^1.27.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.1.2"
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "cross-env": "^7.0.3"
   }
 }

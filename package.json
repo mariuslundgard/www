@@ -1,10 +1,5 @@
 {
   "private": true,
-  "workspaces": [
-    "studio",
-    "system",
-    "website"
-  ],
   "name": "www",
   "version": "1.0.0",
   "description": "My website.",
@@ -13,18 +8,39 @@
   "main": "package.json",
   "scripts": {
     "build": "lerna run build",
-    "deploy": "now --prod",
+    "deploy": "vercel --prod",
     "dev": "run-p dev:*",
     "dev:studio": "yarn --cwd studio dev",
-    "dev:system": "yarn --cwd system dev",
-    "dev:website": "now dev --local-config=now-dev.json",
-    "test": "yarn typecheck",
-    "typecheck": "lerna run typecheck"
+    "dev:website": "vercel dev --local-config=vercel-dev.json",
+    "lint": "lerna run --stream lint",
+    "postinstall": "husky install",
+    "test": "lerna run test",
+    "type-check": "lerna run type-check"
   },
   "devDependencies": {
-    "lerna": "^3.18.4",
+    "@typescript-eslint/parser": "^5.3.1",
+    "esbuild": "^0.13.13",
+    "esbuild-register": "^3.1.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.2.6",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.0",
-    "typescript": "^3.7.2"
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.4"
+  },
+  "workspaces": [
+    "studio",
+    "website"
+  ],
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint"
   }
 }

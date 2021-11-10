@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.settings",
+  "include": ["**/*.tsx", "**/*.ts"],
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "commonjs",
+    "target": "es2020",
+    "jsx": "react"
+  }
+}

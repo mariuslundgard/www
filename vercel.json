@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "scope": "mariuslundgard",
+  "name": "www",
+  "builds": [
+    {"src": "studio/package.json", "use": "@vercel/static-build"},
+    {"src": "website/static/**", "use": "@vercel/static"},
+    {"src": "website/server/ssr.tsx", "use": "@vercel/node"}
+  ],
+  "routes": [
+    {"src": "/studio/static/(.*)", "dest": "/studio/static/$1"},
+    {"src": "/studio", "dest": "/studio/index.html"},
+    {"src": "/studio/.*", "dest": "/studio/index.html"},
+    {"src": "/favicon.ico", "dest": "/website/static/favicon.ico"},
+    {"src": "/static/(.*)", "dest": "/website/static/$1"},
+    {"src": "/", "dest": "/website/server/ssr.tsx"},
+    {"src": "/.*", "dest": "/website/server/ssr.tsx"}
+  ]
+}

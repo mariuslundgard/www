@@ -1,8 +1,8 @@
 {
-  "short_name": "Marius",
+  "short_name": "ML",
   "name": "Marius Lundgård",
-  "background_color": "#252525",
-  "theme_color": "#edf125",
+  "background_color": "#1b1d20",
+  "theme_color": "#1b1d20",
   "icons": [
     {
       "src": "/static/android-chrome-36x36.png",

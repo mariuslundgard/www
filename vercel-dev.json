@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "scope": "mariuslundgard",
+  "name": "www",
+  "builds": [
+    {"src": "website/static/**", "use": "@vercel/static"},
+    {"src": "website/server/ssr.tsx", "use": "@vercel/node"}
+  ],
+  "routes": [
+    {"src": "/favicon.ico", "dest": "/website/static/favicon.ico"},
+    {"src": "/static/(.*)", "dest": "/website/static/$1"},
+    {"src": "/", "dest": "/website/server/ssr.tsx"},
+    {"src": "/.*", "dest": "/website/server/ssr.tsx"}
+  ]
+}
