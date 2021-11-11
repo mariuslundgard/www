@@ -19,62 +19,68 @@ export function Root() {
             Marius Lundgård
           </Text>
 
-          <Text size={[2, 3, 4]} style={{fontWeight: 500}}>
-            I’m a designer and visual storyteller working mainly with digital product design, design
-            systems, art direction and branding.
-          </Text>
+          <Flex direction="column" gap={[4, 5, 6, 7, 8]} mode="muted">
+            <Text size={[2, 3, 4]} style={{fontWeight: 500}}>
+              I’m a designer and visual storyteller working mainly with digital product design,
+              design systems, art direction and branding.
+            </Text>
 
-          <Text size={[2, 3, 4]} style={{fontWeight: 500}}>
-            I’m a product designer at{' '}
-            <a href="https://sanity.io/" rel="noopener noreferrer" target="_blank">
-              Sanity.io
-            </a>
-            .
-          </Text>
+            <Text size={[2, 3, 4]} style={{fontWeight: 500}}>
+              I’m a product designer at{' '}
+              <a href="https://sanity.io/" rel="noopener noreferrer" target="_blank">
+                Sanity.io
+              </a>
+              .
+            </Text>
 
-          <Text size={[2, 3, 4]} style={{fontWeight: 500}}>
-            Before that I’ve worked at{' '}
-            <a href="https://www.nrk.no/" rel="noopener noreferrer" target="_blank">
-              NRK
-            </a>
-            ,{' '}
-            <a href="https://www.yr.no/" rel="noopener noreferrer" target="_blank">
-              Yr.no
-            </a>
-            ,{' '}
-            <a href="https://node.international/" rel="noopener noreferrer" target="_blank">
-              NODE Berlin Oslo
-            </a>
-            , Blast Radius,{' '}
-            <a href="https://try.no/" rel="noopener noreferrer" target="_blank">
-              TRY Apt
-            </a>
-            ,{' '}
-            <a href="https://www.odopod.com/" rel="noopener noreferrer" target="_blank">
-              Odopod
-            </a>
-            , as well as stints of independent graphic design and visual art practice.
-          </Text>
+            <Text size={[2, 3, 4]} style={{fontWeight: 500}}>
+              Before that I’ve worked at{' '}
+              <a href="https://www.nrk.no/" rel="noopener noreferrer" target="_blank">
+                NRK
+              </a>
+              ,{' '}
+              <a href="https://www.yr.no/" rel="noopener noreferrer" target="_blank">
+                Yr.no
+              </a>
+              ,{' '}
+              <a href="https://node.international/" rel="noopener noreferrer" target="_blank">
+                NODE Berlin Oslo
+              </a>
+              , Blast Radius,{' '}
+              <a href="https://try.no/" rel="noopener noreferrer" target="_blank">
+                TRY Apt
+              </a>
+              ,{' '}
+              <a href="https://www.odopod.com/" rel="noopener noreferrer" target="_blank">
+                Odopod
+              </a>
+              , as well as stints of independent graphic design and visual art practice.
+            </Text>
 
-          <Text size={[2, 3, 4]} style={{fontWeight: 500}}>
-            You may reach out to me on{' '}
-            <a href="https://twitter.com/mariuslundgard" rel="noopener noreferrer" target="_blank">
-              Twitter
-            </a>
-            ,{' '}
-            <a href="https://github.com/mariuslundgard" rel="noopener noreferrer" target="_blank">
-              GitHub
-            </a>
-            , and{' '}
-            <a
-              href="https://www.linkedin.com/in/mariuslundgard/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-            .
-          </Text>
+            <Text size={[2, 3, 4]} style={{fontWeight: 500}}>
+              You may reach out to me on{' '}
+              <a
+                href="https://twitter.com/mariuslundgard"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Twitter
+              </a>
+              ,{' '}
+              <a href="https://github.com/mariuslundgard" rel="noopener noreferrer" target="_blank">
+                GitHub
+              </a>
+              , and{' '}
+              <a
+                href="https://www.linkedin.com/in/mariuslundgard/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+              .
+            </Text>
+          </Flex>
         </Flex>
       </Box>
     </ThemeProvider>
