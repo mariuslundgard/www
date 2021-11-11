@@ -12,9 +12,9 @@
   },
   "dependencies": {
     "@body-ui/core": "^0.1.2",
-    "@body-ui/layout": "^0.1.2",
+    "@body-ui/layout": "^0.1.3",
     "@body-ui/theme-default": "^0.1.2",
-    "@body-ui/typography": "^0.1.2",
+    "@body-ui/typography": "^0.1.3",
     "@vercel/node": "^1.12.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

@@ -1024,10 +1024,10 @@
   dependencies:
     typestyle "^2.1.0"
 
-"@body-ui/layout@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@body-ui/layout/-/layout-0.1.2.tgz#32284d6591e67fcaebbb00c883c959db351b5e27"
-  integrity sha512-ZrqqchVZ6DWT4data9+SiG4xZ6qE6XgJgp/XgTzWphh8ejxJ3OBStHDcwyRT06SGtlrAHI2GXiKmXIQ3ZozPXw==
+"@body-ui/layout@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@body-ui/layout/-/layout-0.1.3.tgz#147050fed8810573d100475fc8ba2252f7869e27"
+  integrity sha512-qRW3cCIWm4S8t4mU0lnmEau3FfpfDgb+YFzSujzETdBrqAorPtAbefl5PKC0Y059W9Rgmuk7zSnFOX0LnhgJlQ==
 
 "@body-ui/theme-default@^0.1.2":
   version "0.1.2"
@@ -1037,10 +1037,10 @@
     "@sanity/color" "^2.1.5"
     color-blend "^3.0.1"
 
-"@body-ui/typography@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@body-ui/typography/-/typography-0.1.2.tgz#729f36330ccffcc8845bf2a17e55938f79477d1b"
-  integrity sha512-OCL6F2TYuG2KS3s03qAol9AEnUf86/MswkRGoouaeVdMQ3xtqPkqEdWUHs8MJ6AB5Zloof2xj9UTUVAeliapoQ==
+"@body-ui/typography@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@body-ui/typography/-/typography-0.1.3.tgz#c023f85e478bb8f1d86d973dc8969e5cb280531c"
+  integrity sha512-H+VTGxYklmYML/x6zUeEcyE2XxaP94wIK3qMfpbe3CJVyoESfeApzG3YvAzA/U4j++gVjqDCCzI9uzQQm7PsEA==
 
 "@emotion/is-prop-valid@^0.8.2", "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
