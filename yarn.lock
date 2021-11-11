@@ -1017,30 +1017,30 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@body-ui/core@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@body-ui/core/-/core-0.1.1.tgz#eeb322ac4679c39a93fade35c1f71e4e0725e8cb"
-  integrity sha512-o7Z915b6XxNs26S/oR4n7SCo6w9jaG7xrcuBZOvw3Pr4Pj+57JOtj+G+tKjLYa38MXQ8sc81NFsO3d/WG1o6xw==
+"@body-ui/core@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@body-ui/core/-/core-0.1.2.tgz#c5949070ee10ae68925ea199d8763a92c81e48b2"
+  integrity sha512-3pmLl3yWIQ5fwGCEhmBKS0JVJ7fgEcIIa0cSMAdg+NCUQM9aJiarHftx2kYrFF6DjZsYS3+lZMnghhGDD1FmCQ==
   dependencies:
     typestyle "^2.1.0"
 
-"@body-ui/layout@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@body-ui/layout/-/layout-0.1.1.tgz#d906e49755ab09a1648ad26a66a17eaaa94a74dc"
-  integrity sha512-zwPwk4ozutvEeOLDBnrb1ZwvmFRBnXlXEAr0hUkPXrG684G91k53WpPMN3J/iBYU0VljXibzhN+6je7+5XlXLw==
+"@body-ui/layout@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@body-ui/layout/-/layout-0.1.2.tgz#32284d6591e67fcaebbb00c883c959db351b5e27"
+  integrity sha512-ZrqqchVZ6DWT4data9+SiG4xZ6qE6XgJgp/XgTzWphh8ejxJ3OBStHDcwyRT06SGtlrAHI2GXiKmXIQ3ZozPXw==
 
-"@body-ui/theme-default@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@body-ui/theme-default/-/theme-default-0.1.1.tgz#8a0cb07c19079aed81dded814ca1689cf469bb3d"
-  integrity sha512-R/RCVER0Q9wv8P3gCzZDMhNe6NC+bh6ZPAAldolQwfq0amg4frMle2/BaluepXGjhJWWQpPqxW+iJSPoJABvcg==
+"@body-ui/theme-default@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@body-ui/theme-default/-/theme-default-0.1.2.tgz#d539b0fa234c48d80df1176573d5553c6aaeb987"
+  integrity sha512-xCTgvPB68rJ7ryZ4ugimsDeyc4F/Z/TgqKBScpz/BnGhEqZZGHRGUXFu45rO80P3deSqbBQtQRsifI2xjbYLjQ==
   dependencies:
     "@sanity/color" "^2.1.5"
     color-blend "^3.0.1"
 
-"@body-ui/typography@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@body-ui/typography/-/typography-0.1.1.tgz#47410983e029b25028c1392c65d5e06323ee8232"
-  integrity sha512-HwAT4B+9FwyAWx5fqqLa57iwjRSnoG4axPWsAYlnAXkexit2fPqdG1ZPT+ozReA0D4nqQNp5UHH2XL8+U42XIw==
+"@body-ui/typography@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@body-ui/typography/-/typography-0.1.2.tgz#729f36330ccffcc8845bf2a17e55938f79477d1b"
+  integrity sha512-OCL6F2TYuG2KS3s03qAol9AEnUf86/MswkRGoouaeVdMQ3xtqPkqEdWUHs8MJ6AB5Zloof2xj9UTUVAeliapoQ==
 
 "@emotion/is-prop-valid@^0.8.2", "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
