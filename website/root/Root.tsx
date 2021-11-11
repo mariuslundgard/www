@@ -8,10 +8,11 @@ export function Root() {
   return (
     <ThemeProvider theme={theme}>
       <Box
-        padding={[4, 5, 6, 7, 8, 9]}
+        paddingX={[4, 5, 6, 7, 8]}
+        paddingY={[5, 6, 7, 8, 9]}
         sizing="border-box"
         scheme="dark"
-        style={{boxSizing: 'border-box', minHeight: '100%'}}
+        style={{minHeight: '100%'}}
       >
         <Flex direction="column" gap={[4, 5, 6, 7, 8]} style={{maxWidth: 400}}>
           <Text size={[2, 3, 4]} style={{fontWeight: 800}}>
