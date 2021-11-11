@@ -3,14 +3,14 @@ import {theme} from '../theme'
 import {CommonMetaTags} from './CommonMetaTags'
 import {GATags} from './GATags'
 
-export interface LayoutProps {
+export interface DocumentProps {
   description: string
   staticBasePath?: string
   title?: string
   trackingId?: string
 }
 
-export function Layout(props: LayoutProps) {
+export function Document(props: DocumentProps) {
   const {staticBasePath = '', description, title, trackingId} = props
 
   return (
@@ -34,7 +34,7 @@ export function Layout(props: LayoutProps) {
               `margin:0;`,
               `-webkit-font-smoothing:antialiased;`,
               `}`,
-            ].join('\n'),
+            ].join(''),
           }}
         />
         <style id="styles-target" />
@@ -47,7 +47,7 @@ export function Layout(props: LayoutProps) {
               `html.classList.remove("no-js");`,
               `html.classList.add("js");`,
               `})();`,
-            ].join('\n'),
+            ].join(''),
           }}
         />
       </head>

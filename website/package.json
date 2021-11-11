@@ -7,20 +7,27 @@
   "author": "Marius Lundgård <studio@mariuslundgard.com>",
   "license": "MIT",
   "scripts": {
+    "build": "NODE_ENV=production runtime build",
+    "clean": "rimraf data",
     "lint": "eslint . --ext .js,.jsx,.mjs,.ts,.tsx",
-    "type-check": "tsc --noEmit"
+    "prebuild": "run-s clean",
+    "type-check": "tsc --noEmit",
+    "vercel-build": "(cd ../runtime && yarn build) && yarn build"
   },
   "dependencies": {
-    "@body-ui/core": "^0.1.2",
-    "@body-ui/layout": "^0.1.3",
-    "@body-ui/theme-default": "^0.1.2",
-    "@body-ui/typography": "^0.1.3",
-    "@vercel/node": "^1.12.1",
+    "@body-ui/core": "^0.1.3",
+    "@body-ui/layout": "^0.1.4",
+    "@body-ui/theme-default": "^0.1.3",
+    "@body-ui/typography": "^0.1.4",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/color": "^2.1.5",
+    "date-fns": "^2.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "typestyle": "^2.1.0"
   },
   "devDependencies": {
+    "@mariuslundgard/runtime": "0.1.0",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
     "cross-env": "^7.0.3"

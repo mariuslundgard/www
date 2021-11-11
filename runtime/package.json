@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "name": "@mariuslundgard/runtime",
+  "version": "0.1.0",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "sideEffects": false,
+  "bin": {
+    "runtime": "bin/runtime"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "author": "Marius Lundgård <studio@mariuslundgard.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "run-s build:esbuild build:dts copy:dts:* clean:dts copy:json:*",
+    "build:dts": "tsc --emitDeclarationOnly --project tsconfig.lib.json --rootDir src",
+    "build:esbuild": "node -r esbuild-register scripts/build.ts",
+    "clean": "rimraf lib",
+    "clean:dts": "rimraf lib/dts",
+    "copy:dts:cjs": "cpx 'lib/dts/**/*.{d.ts,d.ts.map}' lib/cjs",
+    "copy:dts:esm": "cpx 'lib/dts/**/*.{d.ts,d.ts.map}' lib/esm",
+    "copy:json:cjs": "cpx 'src/**/*.json' lib/cjs",
+    "copy:json:esm": "cpx 'src/**/*.json' lib/esm",
+    "lint": "eslint . --ext .js,.jsx,.mjs,.ts,.tsx --quiet",
+    "prebuild": "yarn clean",
+    "test": "jest --runInBand",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv-flow": "^3.2.0",
+    "nanoid": "^3.1.30",
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.5"
+  }
+}
