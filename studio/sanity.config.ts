@@ -25,19 +25,19 @@ export default {
   parts: [
     {
       name: 'part:@sanity/base/schema',
-      path: './src/schemas/schema',
+      path: './parts/schema',
     },
     {
       name: 'part:@sanity/desk-tool/structure',
-      path: './src/structure',
+      path: './parts/structure',
     },
     {
       implements: 'part:@sanity/dashboard/config',
-      path: './src/dashboard',
+      path: './parts/dashboard',
     },
     {
       implements: 'part:@sanity/base/brand-logo',
-      path: './src/components/Logo',
+      path: './parts/Logo',
     },
   ],
 }

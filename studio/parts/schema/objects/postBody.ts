@@ -1,4 +1,4 @@
-const postBody = {
+export const postBodyType = {
   name: 'postBody',
   title: 'Post body',
   type: 'array',
@@ -20,5 +20,3 @@ const postBody = {
     },
   ],
 }
-
-export default postBody

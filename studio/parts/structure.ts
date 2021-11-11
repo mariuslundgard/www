@@ -1,5 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder'
-import {PostPreview} from './previews/post'
+import {PostPreview} from '../views/post'
 
 export default () =>
   S.list()

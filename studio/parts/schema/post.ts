@@ -1,4 +1,4 @@
-export default {
+export const postType = {
   type: 'document',
   name: 'post',
   title: 'Post',
@@ -7,6 +7,11 @@ export default {
       type: 'string',
       name: 'title',
       title: 'Title',
+    },
+    {
+      type: 'slug',
+      name: 'slug',
+      title: 'Slug',
     },
     {
       type: 'datetime',

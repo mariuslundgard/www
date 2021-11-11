@@ -1,4 +1,4 @@
-export default {
+export const configType = {
   type: 'document',
   name: 'config',
   title: 'Config',
