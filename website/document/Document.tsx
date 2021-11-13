@@ -10,6 +10,33 @@ export interface DocumentProps {
   trackingId?: string
 }
 
+function GlobalStyle() {
+  const __html = [
+    `html,body,#root{height:100%;}`,
+    `html{text-size-adjust:100%;-webkit-tap-highlight-color:transparent;}`,
+    `body{`,
+    `background-color:${theme.color.dark.brand?.default?.default?.enabled.bg || '#000'};`,
+    `margin:0;`,
+    `-webkit-font-smoothing:antialiased;`,
+    `}`,
+  ].join('')
+
+  return <style dangerouslySetInnerHTML={{__html}} />
+}
+
+function GlobalScript() {
+  const __html = [
+    `!(function(){`,
+    `"use strict";`,
+    `var html=document.documentElement;`,
+    `html.classList.remove("no-js");`,
+    `html.classList.add("js");`,
+    `})();`,
+  ].join('')
+
+  return <script dangerouslySetInnerHTML={{__html}} />
+}
+
 export function Document(props: DocumentProps) {
   const {staticBasePath = '', description, title, trackingId} = props
 
@@ -24,32 +51,9 @@ export function Document(props: DocumentProps) {
         <title>{title || 'Marius Lundgård'}</title>
         <meta name="description" content={description} />
         <CommonMetaTags staticBasePath={staticBasePath} />
-        <style
-          dangerouslySetInnerHTML={{
-            __html: [
-              `html,body,#root{height:100%;}`,
-              `html{text-size-adjust:100%;-webkit-tap-highlight-color:transparent;}`,
-              `body{`,
-              `background-color:${theme.color.dark.brand?.default?.default?.enabled.bg || '#000'};`,
-              `margin:0;`,
-              `-webkit-font-smoothing:antialiased;`,
-              `}`,
-            ].join(''),
-          }}
-        />
+        <GlobalScript />
+        <GlobalStyle />
         <style id="styles-target" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: [
-              `!(function(){`,
-              `"use strict";`,
-              `var html=document.documentElement;`,
-              `html.classList.remove("no-js");`,
-              `html.classList.add("js");`,
-              `})();`,
-            ].join(''),
-          }}
-        />
       </head>
       <body>
         <div id="root" />
