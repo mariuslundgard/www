@@ -63,7 +63,7 @@ export function CommonMetaTags(props: {staticBasePath: string}) {
       <meta name="application-name" className="app-title" content="Marius Lundgård" />
       <meta
         name="theme-color"
-        content={theme.color.dark.base?.default?.default?.enabled.bg || black.hex}
+        content={theme.color.dark.brand?.default?.default?.enabled.bg || black.hex}
       />
     </>
   )
