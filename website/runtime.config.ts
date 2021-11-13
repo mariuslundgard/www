@@ -1,13 +1,20 @@
 import {defineConfig} from '@mariuslundgard/runtime'
 import {config} from './config'
+import {client} from './sanity'
 import {server} from './server'
 
-const postPaths = ['/post/hello-world']
+export default defineConfig(async () => {
+  const postSlugs: string[] = config.features.posts
+    ? await client.fetch('*[_type == "post" && defined(slug.current)].slug.current')
+    : []
 
-export default defineConfig({
-  build: {
-    outDir: 'public',
-  },
-  paths: ['/'].concat(config.features.posts ? postPaths : []),
-  server,
+  const paths = ['/'].concat(postSlugs.map((s) => `/post/${s}`))
+
+  return {
+    build: {
+      outDir: 'public',
+    },
+    paths,
+    server,
+  }
 })
