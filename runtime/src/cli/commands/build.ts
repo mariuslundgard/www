@@ -54,7 +54,7 @@ async function buildPath(
   p: string
 ) {
   const html = await config.server({path: p})
-  const relativePath = p === '/' ? 'index.html' : p.slice(1) + '/index.html'
+  const relativePath = p === '/' ? 'index.html' : p.slice(1) + '.html'
   const filePath = path.resolve(context.cwd, config.build?.outDir || 'public', relativePath)
   const dirPath = path.dirname(filePath)
 
