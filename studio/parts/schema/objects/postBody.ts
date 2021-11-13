@@ -12,6 +12,32 @@ export const postBodyType = {
       ],
       lists: [{title: 'Numbered', value: 'number'}],
       marks: {
+        annotations: [
+          {
+            type: 'object',
+            name: 'link',
+            title: 'Link',
+            fields: [
+              {
+                type: 'url',
+                name: 'href',
+                title: 'URL',
+              },
+              {
+                type: 'string',
+                name: 'target',
+                title: 'Target',
+                options: {
+                  layout: 'dropdown',
+                  list: [{title: 'Blank page', value: '_blank'}],
+                },
+              },
+            ],
+            initialValue: {
+              target: '_blank',
+            },
+          },
+        ],
         decorators: [
           {title: 'Strong', value: 'strong'},
           {title: 'Emphasis', value: 'em'},

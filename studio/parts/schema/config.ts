@@ -8,5 +8,17 @@ export const configType = {
       name: 'title',
       title: 'Title',
     },
+    {
+      type: 'object',
+      name: 'frontPage',
+      title: 'Front page',
+      fields: [
+        {
+          type: 'postBody',
+          name: 'content',
+          title: 'Content',
+        },
+      ],
+    },
   ],
 }
