@@ -8,6 +8,10 @@ import {BlockContent} from '../../components/blockContent'
 import {config} from '../../config'
 
 const Root = styled(Box)({
+  $debugName: 'home-screen',
+
+  minHeight: '100%',
+
   $nest: {
     '& a': {
       textDecoration: 'none',
@@ -24,6 +28,10 @@ const Root = styled(Box)({
   },
 })
 
+const Wrapper = styled(Box)({
+  maxWidth: '400px',
+})
+
 export function HomeScreen(props: {
   data: {
     config?: {frontPage?: {content?: any[]}}
@@ -35,15 +43,14 @@ export function HomeScreen(props: {
 
   return (
     <Root
-      bg="default"
       paddingX={4}
       paddingY={5}
       palette="brand"
       scheme="dark"
       sizing="border-box"
-      style={{minHeight: '100%'}}
+      tone="default"
     >
-      <Box columns={1} gap={5} layout="grid" style={{maxWidth: 400}}>
+      <Wrapper>
         <Box>
           <Text size={3}>Marius Lundgård</Text>
 
@@ -71,7 +78,7 @@ export function HomeScreen(props: {
             </Box>
           </Box>
         )}
-      </Box>
+      </Wrapper>
     </Root>
   )
 }
