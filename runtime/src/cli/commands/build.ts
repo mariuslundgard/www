@@ -35,7 +35,8 @@ async function resolveConfig(context: {cachePath: string; cwd: string}): Promise
     })
 
     const configMod = require(configPath)
-    const config = configMod.default ? configMod.default : configMod
+    const configPromise: Promise<RuntimeConfig> = configMod.default ? configMod.default : configMod
+    const config = await configPromise
 
     await rimraf(configPath)
 

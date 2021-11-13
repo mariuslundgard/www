@@ -6,9 +6,15 @@ interface RuntimeConfigSpec {
   server: (req: RuntimeRequest) => Promise<string>
 }
 
-export function defineConfig(spec: RuntimeConfigSpec): RuntimeConfig {
-  return {
+export function defineConfig(
+  spec: RuntimeConfigSpec | (() => Promise<RuntimeConfigSpec>)
+): Promise<RuntimeConfig> {
+  if (typeof spec === 'function') {
+    return spec()
+  }
+
+  return Promise.resolve({
     paths: spec.paths,
     server: spec.server,
-  }
+  })
 }
