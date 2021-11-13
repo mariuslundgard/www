@@ -30,7 +30,9 @@ export function Document(props: DocumentProps) {
               `html,body,#root{height:100%;}`,
               `html{text-size-adjust:100%;-webkit-tap-highlight-color:transparent;}`,
               `body{`,
-              `background-color:${theme.color.dark.base?.default?.default?.enabled.bg || '#000'};`,
+              `background-color:${
+                theme.color.dark.accent?.default?.default?.enabled.bg || '#000'
+              };`,
               `margin:0;`,
               `-webkit-font-smoothing:antialiased;`,
               `}`,

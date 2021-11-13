@@ -4,11 +4,14 @@ import type {DataStore} from './types'
 export function createSanityStore(): DataStore {
   async function findIndex() {
     return client.fetch(`{
+      "config": *[_type == "config" && _id == "config"]{
+        frontPage,
+      }[0],
       "posts": *[_type == "post" && defined(slug)] {
         title,
         "slug": slug.current,
-        published
-      }
+        published,
+      },
     }`)
   }
 

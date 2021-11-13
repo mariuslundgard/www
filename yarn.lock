@@ -954,7 +954,7 @@
     core-js-pure "^3.19.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.13", "@babel/runtime@^7.14.0", "@babel/runtime@^7.16.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.0", "@babel/runtime@^7.16.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4":
   version "7.16.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
   integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
@@ -998,6 +998,13 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@body-ui/color@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@body-ui/color/-/color-0.1.1.tgz#b2ec4044fe3f5d7fdc0d05b68a7257cdcfdfbe8d"
+  integrity sha512-d9COhvLowVCNSzjVFXVsf5KYbfYRsxI1NM/GyJne7zR3y3xHz3Vao4vQW+w1/TIt1hbaXcVslT9X1wT8MW+7dA==
+  dependencies:
+    polished "^3.0.1"
+
 "@body-ui/core@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@body-ui/core/-/core-0.1.3.tgz#54bb37e0ba49bfb75fed5a7684d931f3c029b8e2"
@@ -1005,23 +1012,23 @@
   dependencies:
     typestyle "^2.1.0"
 
-"@body-ui/layout@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@body-ui/layout/-/layout-0.1.4.tgz#15407210dac80be043bc6f41dce57115dc494ded"
-  integrity sha512-qPpiT0iXhFW0xEr0/ZXXFgDJ4XT5bx7OuSgaFB20qHqaefFCsDwMTJJ44V/AbbKf95qo7c0fG1vaV0ivkRvADA==
+"@body-ui/layout@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@body-ui/layout/-/layout-0.1.5.tgz#31f71665e7a49579f6d3b8d03b0208f0b8d7bc7d"
+  integrity sha512-NuWmrfbBZohNQaEEw1+Hbep78imTxh5kXVELoBBYhn01WREIYZwK4zoQBp0+6QwCag4mvwQjHkLqtaTEABQyEg==
 
-"@body-ui/theme-default@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@body-ui/theme-default/-/theme-default-0.1.3.tgz#0ec5b4a1a3ac129a501c76212ba39b46fe1be41f"
-  integrity sha512-tCaKqh7D+5204mbiFrvitKQIxqMl21TykhFqeRjpdLnDXGxJitfgU+sO9wVVGK0gXhrbPIQKt9W1UvjCEa9HCQ==
+"@body-ui/theme-default@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@body-ui/theme-default/-/theme-default-0.1.4.tgz#06f3bdcdae466b5db5b8386e0cf8b228fcb16b1b"
+  integrity sha512-6iDMczADxM/hmOuqHZp37i+MbP5iADAVGtuyQBu56ieWLFU1Ks8QcTBCGJLOKkZ0cB5OwJ1Z1ogBfFmRc0uQkA==
   dependencies:
-    "@sanity/color" "^2.1.5"
+    "@body-ui/color" "^0.1.1"
     color-blend "^3.0.1"
 
-"@body-ui/typography@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@body-ui/typography/-/typography-0.1.4.tgz#00a990eefa26cd5502aaf587db66f06f8748a738"
-  integrity sha512-A2clINXDFEWPkFiyqOl0Qoecw2/LXhU4ONLzhe9KR+HurSsEW3F2leQ1BXnMgjeY2wNAHlVA1Q87VNFHRrtDog==
+"@body-ui/typography@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@body-ui/typography/-/typography-0.1.5.tgz#422b4cffae8dc7d1c8d4ab2370ef28ae9c9aa03e"
+  integrity sha512-M/wl8XWIkf5JE8yhnpYMhEun21skIPziue59UAg65AW5E27yaaTlNjdbpuHqTXVqMvspxyPDS08uyQFRJXHwZg==
 
 "@emotion/is-prop-valid@^0.8.2", "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
@@ -11269,6 +11276,13 @@ pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
+
+polished@^3.0.1:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-3.7.2.tgz#ec5ddc17a7d322a574d5e10ddd2a6f01d3e767d1"
+  integrity sha512-pQKtpZGmsZrW8UUpQMAnR7s3ppHeMQVNyMDKtUyKwuvDmklzcEyM5Kllb3JyE/sE/x7arDmyd35i+4vp99H6sQ==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 polished@^4.0.5:
   version "4.1.3"

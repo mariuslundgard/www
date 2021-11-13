@@ -10,7 +10,7 @@ export const config = {
     },
   },
   features: {
-    posts: process.env.FEATURE_POSTS === '1',
+    posts: false, // process.env.FEATURE_POSTS === '1',
   },
   ga: {
     trackingId: process.env.GA_TRACKING_ID,

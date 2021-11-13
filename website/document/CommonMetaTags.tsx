@@ -1,3 +1,4 @@
+import {black} from '@body-ui/color'
 import React from 'react'
 import {theme} from '../theme'
 
@@ -16,11 +17,7 @@ export function CommonMetaTags(props: {staticBasePath: string}) {
         href={`${staticBasePath}/apple-touch-icon-precomposed.png`}
         rel="apple-touch-icon-precomposed"
       />
-      <link
-        href={`${staticBasePath}/safari-pinned-tab.svg`}
-        rel="mask-icon"
-        color="#${colors.black}"
-      />
+      <link href={`${staticBasePath}/safari-pinned-tab.svg`} rel="mask-icon" color={black.hex} />
       <link
         href={`${staticBasePath}/android-chrome-192x192.png`}
         sizes="192x192"
@@ -51,7 +48,7 @@ export function CommonMetaTags(props: {staticBasePath: string}) {
       <meta name="application-name" className="app-title" content="Marius Lundgård" />
       <meta
         name="theme-color"
-        content={theme.color.dark.base?.default?.default?.enabled.bg || '#000'}
+        content={theme.color.dark.accent?.default?.default?.enabled.bg || black.hex}
       />
     </>
   )
