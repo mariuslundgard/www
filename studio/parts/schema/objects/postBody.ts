@@ -44,5 +44,8 @@ export const postBodyType = {
         ],
       },
     },
+    {
+      type: 'figure',
+    },
   ],
 }
