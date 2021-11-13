@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production runtime build",
-    "clean": "rimraf data",
+    "clean": "rimraf public",
     "lint": "eslint . --ext .js,.jsx,.mjs,.ts,.tsx",
     "prebuild": "run-s clean",
     "type-check": "tsc --noEmit",

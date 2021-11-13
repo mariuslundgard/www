@@ -2,9 +2,7 @@ import {Box} from '@body-ui/layout'
 import {Text} from '@body-ui/typography'
 import React from 'react'
 
-export function NotFoundScreen(props: {path: string}) {
-  const {path} = props
-
+export function NotFoundScreen() {
   return (
     <Box
       fg="critical"
@@ -14,9 +12,7 @@ export function NotFoundScreen(props: {path: string}) {
       scheme="dark"
       style={{alignItems: 'center', justifyContent: 'center'}}
     >
-      <Text size={[2, 3, 4]} style={{fontWeight: 500}}>
-        Not found: {path}
-      </Text>
+      <Text size={[2, 3, 4]}>Page not found</Text>
     </Box>
   )
 }

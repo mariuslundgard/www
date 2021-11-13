@@ -8,7 +8,7 @@ export default defineConfig(async () => {
     ? await client.fetch('*[_type == "post" && defined(slug.current)].slug.current')
     : []
 
-  const paths = ['/'].concat(postSlugs.map((s) => `/post/${s}`))
+  const paths = ['/', '/404'].concat(postSlugs.map((s) => `/post/${s}`))
 
   return {
     build: {

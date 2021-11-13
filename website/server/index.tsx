@@ -19,7 +19,7 @@ export async function server(req: RuntimeRequest) {
 
   const route = await matchRoute(req.path, {store})
   const documentHTML = renderToStaticMarkup(<Document {...documentProps} />)
-  const rootHTML = renderToString(<Root path={req.path} route={route} />)
+  const rootHTML = renderToString(<Root route={route} />)
   const styles = getStyles()
 
   return (

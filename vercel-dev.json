@@ -21,6 +21,6 @@
     {"source": "/favicon.ico", "destination": "/website/static/favicon.ico"},
     {"source": "/static/(.*)", "destination": "/website/static/$1"},
     {"source": "/", "destination": "/website/index.html"},
-    {"source": "/(.*)", "destination": "/website/$1/index.html"}
+    {"source": "/(.*)", "destination": "/website/$1.html"}
   ]
 }
