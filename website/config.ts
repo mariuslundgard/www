@@ -10,7 +10,7 @@ export const config = {
     },
   },
   features: {
-    posts: false, // process.env.FEATURE_POSTS === '1',
+    posts: process.env.FEATURE_POSTS === '1',
   },
   ga: {
     trackingId: process.env.GA_TRACKING_ID,
@@ -22,7 +22,10 @@ export const config = {
   },
   site: {
     staticBasePath: '/static',
-    description:
-      'I’m a designer and visual storyteller working mainly with digital product design, web technology, art direction and branding.',
+    description: [
+      'I’m a designer who approaches code and technology as a design material. That means I ',
+      'prefer prototyping using code – with real content and real functionality – over ',
+      'traditional static sketching or visual prototyping tools.',
+    ],
   },
 }

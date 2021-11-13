@@ -52,27 +52,29 @@ export function HomeScreen(props: {
     >
       <Wrapper>
         <Box>
-          <Text size={3}>Marius Lundgård</Text>
+          <Text size={[3, 3, 4]}>Marius Lundgård</Text>
 
-          <Box gap={4} layout="grid">
+          <Box marginTop={[3, 3, 4]}>
+            <Text size={[1, 1, 2]}>Designer / Developer</Text>
+          </Box>
+
+          <Box gap={4} layout="grid" marginY={5}>
             <BlockContent value={content} />
           </Box>
         </Box>
 
         {config.features.posts && (
-          <Box>
+          <Box paddingTop={5} style={{borderTop: '1px solid var(--body-border)'}}>
             <Box columns={1} gap={5} layout="grid">
-              <Text size={3}>Texts</Text>
+              <Text size={[3, 3, 4]}>Texts</Text>
 
               {data.posts.map((p) => (
-                <Box key={p.slug} gap={2} layout="grid">
-                  <Text size={2}>
-                    <strong>
-                      <a href={`/post/${p.slug}`}>{p.title}</a>
-                    </strong>
+                <Box key={p.slug} gap={[3, 3, 4]} layout="grid">
+                  <Text size={[3, 3, 4]}>
+                    <a href={`/post/${p.slug}`}>{p.title}</a>
                   </Text>
 
-                  <Text size={1}>{format(Date.parse(p.published), 'MMM d, yyyy')}</Text>
+                  <Text size={[1, 1, 2]}>{format(Date.parse(p.published), 'MMM d, yyyy')}</Text>
                 </Box>
               ))}
             </Box>
