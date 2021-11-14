@@ -12,6 +12,9 @@ export const postType = {
       type: 'slug',
       name: 'slug',
       title: 'Slug',
+      options: {
+        source: 'title',
+      },
     },
     {
       type: 'datetime',

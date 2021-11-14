@@ -28,15 +28,21 @@
     "@sanity/default-layout": "2.21.10",
     "@sanity/default-login": "2.21.10",
     "@sanity/desk-tool": "2.21.10",
+    "@sanity/icons": "^1.2.1",
     "@sanity/types": "^2.21.10",
+    "@sanity/ui": "^0.36.15",
     "@sanity/vision": "2.21.10",
+    "codemirror": "^5.63.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
+    "react-codemirror2": "^7.2.1",
     "react-dom": "^17.0.2",
     "sanity-plugin-google-analytics": "^0.2.6",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@sanity/cli": "2.21.10"
+    "@sanity/cli": "2.21.10",
+    "@types/codemirror": "^5.60.5",
+    "@types/styled-components": "^5.1.15"
   }
 }

@@ -16,6 +16,7 @@ export default {
     '@sanity/dashboard',
     '@sanity/desk-tool',
     'google-analytics',
+    'code-field',
   ],
   env: {
     development: {
