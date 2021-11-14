@@ -4,6 +4,7 @@ import {Text} from '@body-ui/typography'
 import BlockContentToReact from '@sanity/block-content-to-react'
 import React, {createContext, useContext, useMemo} from 'react'
 import {FigureResolver} from '../../figures'
+import {Code} from '../code'
 
 const Root = styled(BlockContentToReact)<any>({
   $nest: {
@@ -30,8 +31,30 @@ const serializers = {
   },
   types: {
     block: Block,
+    code: CodeBlock,
     figure: Figure,
   },
+}
+
+function CodeBlock(props: any) {
+  const {node} = props
+  const {size} = useBlockContent()
+
+  return (
+    <Box
+      marginY={[size + 4, size + 4, size + 5]}
+      mode="muted"
+      padding={[size, size, size + 1]}
+      palette="accent"
+      radius={2}
+      style={{overflow: 'auto'}}
+      tone="default"
+    >
+      <Code language={node.language} size={[size - 2, size - 2, size - 1]}>
+        {node.code}
+      </Code>
+    </Box>
+  )
 }
 
 function Figure(props: any) {

@@ -57,7 +57,7 @@ export function CommonMetaTags(props: {staticBasePath: string}) {
         href={`${staticBasePath}/ml-favicon-1024.png`}
       />
 
-      <link rel="manifest" href={`${staticBasePath}/ml-manifest.json`} />
+      <link rel="manifest" href={`${staticBasePath}/manifest.json`} />
       <meta name="apple-mobile-web-app-title" content="Marius Lundgård" />
       <meta name="apple-mobile-web-app-capable" />
       <meta name="application-name" className="app-title" content="Marius Lundgård" />

@@ -51,26 +51,31 @@ export function HomeScreen(props: {
       tone="default"
     >
       <Wrapper>
-        <Box>
-          <Text size={[3, 3, 4]}>Marius Lundgård</Text>
+        <Box palette="accent" style={{borderTop: '1px solid var(--body-border)'}} />
 
-          <Box marginTop={[3, 3, 4]}>
-            <Text size={[1, 1, 2]}>Designer / Developer</Text>
-          </Box>
+        <Box columns={1} gap={[2, 2, 3]} layout="grid" paddingTop={3} marginBottom={3}>
+          <Text size={[1, 1, 2]}>Marius Lundgård</Text>
+          <Text size={[1, 1, 2]}>Designer / Design Technologist</Text>
+        </Box>
 
-          <Box gap={4} layout="grid" marginY={5}>
-            <BlockContent value={content} />
-          </Box>
+        <Box gap={4} layout="grid" marginY={5}>
+          <BlockContent value={content} />
         </Box>
 
         {config.features.posts && (
-          <Box paddingTop={5} style={{borderTop: '1px solid var(--body-border)'}}>
+          <>
+            <Box
+              paddingTop={3}
+              palette="accent"
+              style={{borderTop: '1px solid var(--body-border)'}}
+            />
+
             <Box columns={1} gap={5} layout="grid">
-              <Text size={[3, 3, 4]}>Texts</Text>
+              <Text size={[1, 1, 2]}>Texts</Text>
 
               {data.posts.map((p) => (
                 <Box key={p.slug} gap={[3, 3, 4]} layout="grid">
-                  <Text size={[3, 3, 4]}>
+                  <Text size={[3, 3, 4]} style={{fontWeight: 500}}>
                     <a href={`/post/${p.slug}`}>{p.title}</a>
                   </Text>
 
@@ -78,7 +83,7 @@ export function HomeScreen(props: {
                 </Box>
               ))}
             </Box>
-          </Box>
+          </>
         )}
       </Wrapper>
     </Root>

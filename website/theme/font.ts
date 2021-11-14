@@ -2,7 +2,7 @@ import type {Theme} from '@body-ui/core'
 
 export const font: Theme['font'] = {
   text: {
-    family: 'Helvetica, Arial, system-ui, sans-serif',
+    family: 'Helvetica Neue, Helvetica, Arial, system-ui, sans-serif',
     sizes: [
       {
         ascenderHeight: 3,
@@ -13,8 +13,8 @@ export const font: Theme['font'] = {
         letterSpacing: 0,
       },
       {
-        ascenderHeight: 3,
-        descenderHeight: 5,
+        ascenderHeight: 4,
+        descenderHeight: 4,
         fontSize: 15.5,
         iconSize: 21,
         lineHeight: 19,
@@ -29,16 +29,16 @@ export const font: Theme['font'] = {
         letterSpacing: 0,
       },
       {
-        ascenderHeight: 5,
-        descenderHeight: 7,
+        ascenderHeight: 6,
+        descenderHeight: 6,
         fontSize: 21,
         iconSize: 29,
         lineHeight: 27,
         letterSpacing: 0,
       },
       {
-        ascenderHeight: 6,
-        descenderHeight: 8,
+        ascenderHeight: 7,
+        descenderHeight: 7,
         fontSize: 23.65,
         iconSize: 33,
         lineHeight: 31,

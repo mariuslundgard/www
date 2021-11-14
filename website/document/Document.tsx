@@ -1,3 +1,4 @@
+import {hues} from '@body-ui/color'
 import React from 'react'
 import {theme} from '../theme'
 import {CommonMetaTags} from './CommonMetaTags'
@@ -11,14 +12,31 @@ export interface DocumentProps {
 }
 
 function GlobalStyle() {
+  // prettier-ignore
   const __html = [
     `html,body,#root{height:100%;}`,
     `html{text-size-adjust:100%;-webkit-tap-highlight-color:transparent;}`,
     `body{`,
-    `background-color:${theme.color.dark.brand?.default?.default?.enabled.bg || '#000'};`,
-    `margin:0;`,
-    `-webkit-font-smoothing:antialiased;`,
+      `background-color:${theme.color.dark.brand?.default?.default?.enabled.bg || '#000'};`,
+      `margin:0;`,
+      `-webkit-font-smoothing:antialiased;`,
     `}`,
+    `*::selection{`,
+      `background-color:${hues.purple[500].hex};`,
+      `color:#fff;`,
+      `mix-blend-mode:screen;`,
+    `}`,
+    `*::-moz-selection{`,
+      `background-color:${hues.purple[500].hex};`,
+      `color:#fff;`,
+      `mix-blend-mode:screen;`,
+    `}`,
+    `*::-webkit-selection{`,
+      `background-color:${hues.purple[500].hex};`,
+      `color:#fff;`,
+      `mix-blend-mode:screen;`,
+    `}`,
+    // ,*::-moz-selection,*::-webkit-selection
   ].join('')
 
   return <style dangerouslySetInnerHTML={{__html}} />
