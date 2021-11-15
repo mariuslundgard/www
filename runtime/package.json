@@ -15,9 +15,10 @@
   "author": "Marius Lundgård <studio@mariuslundgard.com>",
   "license": "MIT",
   "scripts": {
-    "build": "run-s build:esbuild build:dts copy:dts:* clean:dts copy:json:*",
+    "build": "run-s build:esbuild build:dts copy:dts:* clean:dts copy:json:* build:version",
     "build:dts": "tsc --emitDeclarationOnly --project tsconfig.lib.json --rootDir src",
     "build:esbuild": "node -r esbuild-register scripts/build.ts",
+    "build:version": "node -r esbuild-register scripts/version/build.ts",
     "clean": "rimraf lib",
     "clean:dts": "rimraf lib/dts",
     "copy:dts:cjs": "cpx 'lib/dts/**/*.{d.ts,d.ts.map}' lib/cjs",

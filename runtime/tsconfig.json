@@ -5,6 +5,7 @@
     "rootDir": "../",
     "outDir": "./lib/dts/",
     "module": "ES2020",
-    "noEmit": true
+    "noEmit": true,
+    "resolveJsonModule": true
   }
 }
