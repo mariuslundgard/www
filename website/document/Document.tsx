@@ -1,4 +1,5 @@
 import {hues} from '@body-ui/color'
+import {version} from '@mariuslundgard/runtime'
 import React from 'react'
 import {theme} from '../theme'
 import {CommonMetaTags} from './CommonMetaTags'
@@ -64,6 +65,7 @@ export function Document(props: DocumentProps) {
         {trackingId && <GATags trackingId={trackingId} />}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta name="generator" content={`@mariuslundgard/runtime ${version}`} />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <title>{title || 'Marius Lundgård'}</title>
