@@ -15,7 +15,7 @@ const Root = styled(Box)({
   $nest: {
     '& a': {
       textDecoration: 'none',
-      color: `${hues.blue[200].hex} !important`,
+      color: `${hues.purple[400].hex} !important`,
     },
 
     '@media(hover: hover)': {
@@ -43,18 +43,18 @@ export function HomeScreen(props: {
 
   return (
     <Root
-      paddingX={4}
-      paddingY={5}
+      padding={4}
+      paddingBottom={[5, 6, 7]}
       palette="brand"
       scheme="dark"
       sizing="border-box"
       tone="default"
     >
       <Wrapper>
-        <Box palette="accent" style={{borderTop: '1px solid var(--body-border)'}} />
-
-        <Box columns={1} gap={[2, 2, 3]} layout="grid" paddingTop={3} marginBottom={3}>
-          <Text size={[1, 1, 2]}>Marius Lundgård</Text>
+        <Box columns={1} gap={[2, 2, 3]} layout="grid" marginBottom={[5, 6, 7]}>
+          <Text size={[1, 1, 2]} style={{fontWeight: 600}}>
+            Marius Lundgård
+          </Text>
           <Text size={[1, 1, 2]}>Designer / Design Technologist</Text>
         </Box>
 
@@ -64,18 +64,16 @@ export function HomeScreen(props: {
 
         {config.features.posts && (
           <>
-            <Box
-              paddingTop={3}
-              palette="accent"
-              style={{borderTop: '1px solid var(--body-border)'}}
-            />
+            <Box marginTop={[5, 6, 7]} style={{borderTop: '1px solid var(--body-border)'}} />
+
+            <Box marginBottom={[5, 6, 7]} marginTop={3}>
+              <Text size={[1, 1, 2]}>Texts</Text>
+            </Box>
 
             <Box columns={1} gap={5} layout="grid">
-              <Text size={[1, 1, 2]}>Texts</Text>
-
               {data.posts.map((p) => (
-                <Box key={p.slug} gap={[3, 3, 4]} layout="grid">
-                  <Text size={[3, 3, 4]} style={{fontWeight: 500}}>
+                <Box key={p.slug} gap={[2, 2, 3]} layout="grid">
+                  <Text size={[1, 1, 2]} style={{fontWeight: 600}}>
                     <a href={`/post/${p.slug}`}>{p.title}</a>
                   </Text>
 

@@ -8,19 +8,17 @@ export function PostScreen(props: {data: any}) {
   const {data} = props
 
   return (
-    <Box paddingX={4} paddingY={[5, 6, 7, 8]} palette="brand" scheme="dark" sizing="border-box">
+    <Box padding={4} paddingBottom={[5, 6, 7]} palette="brand" scheme="dark" sizing="border-box">
       <Container>
-        <Text size={[3, 3, 4]} style={{fontWeight: 500}}>
-          {data.title}
-        </Text>
+        <Box columns={1} gap={[2, 2, 3]} layout="grid" marginBottom={[5, 6, 7]}>
+          <Text size={[1, 1, 2]} style={{fontWeight: 600}}>
+            {data.title}
+          </Text>
 
-        <Box marginTop={[3, 3, 4]}>
           <Text size={[1, 1, 2]}>{format(Date.parse(data.published), 'MMM d, yyyy')}</Text>
         </Box>
 
-        <Box marginTop={[5, 5, 6]}>
-          <BlockContent value={data.body} />
-        </Box>
+        <BlockContent value={data.body} />
       </Container>
     </Box>
   )

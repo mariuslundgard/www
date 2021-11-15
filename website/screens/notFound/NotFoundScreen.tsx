@@ -5,13 +5,16 @@ import React from 'react'
 export function NotFoundScreen() {
   return (
     <Box
-      tone="critical"
       height="100%"
       layout="flex"
+      palette="brand"
       scheme="dark"
       style={{alignItems: 'center', justifyContent: 'center'}}
+      tone="critical"
     >
-      <Text size={3}>Page not found</Text>
+      <Box>
+        <Text size={3}>Page not found</Text>
+      </Box>
     </Box>
   )
 }
