@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "@mariuslundgard/highlight",
+  "version": "0.1.0",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "/lib"
+  ],
+  "author": "Marius Lundgård <studio@mariuslundgard.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "run-s build:esbuild build:dts copy:dts:* clean:dts copy:plist:*",
+    "build:dts": "tsc --emitDeclarationOnly --project tsconfig.lib.json --rootDir src",
+    "build:esbuild": "node -r esbuild-register scripts/build.ts",
+    "clean": "rimraf lib",
+    "clean:dts": "rimraf lib/dts",
+    "copy:dts:cjs": "cpx 'lib/dts/**/*.{d.ts,d.ts.map}' lib/cjs",
+    "copy:dts:esm": "cpx 'lib/dts/**/*.{d.ts,d.ts.map}' lib/esm",
+    "copy:plist:cjs": "cpx 'src/**/*.plist' lib/cjs",
+    "copy:plist:esm": "cpx 'src/**/*.plist' lib/esm",
+    "grammar:build": "node -r esbuild-register scripts/grammar/build.ts",
+    "lint": "eslint . --ext .js,.jsx,.mjs,.ts,.tsx",
+    "prebuild": "run-s clean",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "vscode-oniguruma": "^1.5.1",
+    "vscode-textmate": "^5.4.1"
+  }
+}

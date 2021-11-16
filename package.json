@@ -9,9 +9,10 @@
   "scripts": {
     "build": "lerna run build",
     "deploy": "vercel --prod",
-    "dev": "run-p dev:*",
+    "dev": "run-p dev:studio dev:website",
     "dev:studio": "yarn --cwd studio dev",
-    "dev:website": "vercel dev --local-config=vercel-dev.json",
+    "dev:vercel": "vercel dev --local-config=vercel-dev.json",
+    "dev:website": "yarn --cwd website dev",
     "lint": "lerna run --stream lint",
     "postinstall": "husky install",
     "test": "lerna run test",
@@ -43,6 +44,7 @@
     "typescript": "^4.4.4"
   },
   "workspaces": [
+    "highlight",
     "runtime",
     "studio",
     "website"

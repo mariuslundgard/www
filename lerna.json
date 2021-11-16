@@ -2,5 +2,5 @@
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "packages": ["runtime", "studio", "website"]
+  "packages": ["highlight", "runtime", "studio", "website"]
 }

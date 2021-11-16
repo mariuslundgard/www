@@ -2,7 +2,7 @@ import {styled} from '@body-ui/core'
 import {Box} from '@body-ui/layout'
 import {Text} from '@body-ui/typography'
 import BlockContentToReact from '@sanity/block-content-to-react'
-import React, {createContext, useContext, useMemo} from 'react'
+import React, {createContext, Fragment, useContext, useMemo} from 'react'
 import {FigureResolver} from '../../figures'
 import {Code} from '../code'
 
@@ -24,6 +24,44 @@ function useBlockContent() {
   return useContext(BlockContentContext)
 }
 
+const TOKEN_CLASS_NAMES: Record<string, string | undefined> = {
+  'constant.numeric.decimal': 'number',
+
+  'entity.name.function': 'function',
+  'entity.name.type': 'class-name',
+  'entity.name.type.interface': 'class-name',
+  'entity.name.tag': 'keyword',
+
+  'keyword.control.flow': 'keyword',
+  'keyword.operator.assignment': 'keyword',
+
+  'punctuation.separator.key-value': 'keyword',
+
+  'storage.type': 'keyword',
+  'storage.type.function': 'keyword',
+  'storage.type.interface': 'keyword',
+
+  'support.class.console': 'symbol',
+  'support.function.console': 'function',
+  'support.type.primitive': 'class-name',
+
+  'variable.other.constant': 'constant',
+  'variable.parameter': 'class',
+}
+
+function getClassName(scopes: string[]) {
+  const _scopes = scopes
+    .map((s) => s.split('.').slice(0, -1).join('.'))
+    .map((s) => {
+      return TOKEN_CLASS_NAMES[s]
+    })
+    .filter(Boolean)
+
+  if (_scopes.length === 0) return ''
+
+  return 'token ' + _scopes.join(' ')
+}
+
 const serializers = {
   listItem: ListItem,
   marks: {
@@ -40,6 +78,25 @@ function CodeBlock(props: any) {
   const {node} = props
   const {size} = useBlockContent()
 
+  const codeLines = node.code.split('\n')
+
+  const lines = useMemo(() => {
+    const t: any[] = node.tokens
+
+    return t.map((lineTokens: any[], lineIndex) => {
+      const code = codeLines[lineIndex] || ''
+
+      return lineTokens.map((token) => {
+        return {
+          start: token.startIndex,
+          end: token.endIndex,
+          scopes: token.scopes,
+          code: code.slice(token.startIndex, token.endIndex),
+        }
+      })
+    })
+  }, [codeLines, node.tokens])
+
   return (
     <Box
       marginY={[size + 4, size + 4, size + 5]}
@@ -50,8 +107,29 @@ function CodeBlock(props: any) {
       style={{overflow: 'auto'}}
       tone="default"
     >
-      <Code language={node.language} size={[size - 2, size - 2, size - 1]}>
-        {node.code}
+      <Code>
+        <code>
+          {lines.map((lineTokens, lineIndex) => {
+            return (
+              <Fragment key={lineIndex}>
+                {lineTokens.map((token, tokenIndex) => {
+                  const cn = getClassName(token.scopes)
+
+                  return cn ? (
+                    <span className={cn} data-scopes={token.scopes.join(' ')} key={tokenIndex}>
+                      {token.code}
+                    </span>
+                  ) : (
+                    <span data-scopes={token.scopes.join(' ')} key={tokenIndex}>
+                      {token.code}
+                    </span>
+                  )
+                })}
+                {'\n'}
+              </Fragment>
+            )
+          })}
+        </code>
       </Code>
     </Box>
   )

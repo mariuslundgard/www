@@ -1,3 +1,4 @@
+import {highlight} from '@mariuslundgard/highlight'
 import {client} from '../sanity'
 import type {DataStore} from './types'
 
@@ -16,7 +17,7 @@ export function createSanityStore(): DataStore {
   }
 
   async function findPost(slug: string) {
-    return client.fetch(
+    const post = await client.fetch(
       `*[_type == "post" && slug.current == $slug] {
         title,
         "slug": slug.current,
@@ -25,6 +26,15 @@ export function createSanityStore(): DataStore {
       }[0]`,
       {slug}
     )
+
+    for (const block of post.body) {
+      if (block._type === 'code' && block.code) {
+        // Augment with highlighting tokens
+        block.tokens = await highlight('tsx', block.code.split('\n'))
+      }
+    }
+
+    return post
   }
 
   async function findPosts() {

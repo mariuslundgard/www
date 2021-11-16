@@ -2,13 +2,13 @@ import {hues} from '@body-ui/color'
 import {styled} from '@body-ui/core'
 import {Text} from '@body-ui/typography'
 import React from 'react'
-import Refractor from 'react-refractor'
+// import Refractor from 'react-refractor'
 
-import jsx from 'refractor/lang/jsx'
-import ts from 'refractor/lang/typescript'
+// import jsx from 'refractor/lang/jsx'
+// import ts from 'refractor/lang/typescript'
 
-Refractor.registerLanguage(jsx)
-Refractor.registerLanguage(ts)
+// Refractor.registerLanguage(jsx)
+// Refractor.registerLanguage(ts)
 
 const mainShade = 400
 const secondaryShade = 700
@@ -64,8 +64,9 @@ const CodeText = styled(Text)({
       fontFamily: 'SF Mono, Menlo, monospace',
     },
 
-    '& .refractor .token': {
+    '& .token': {
       $nest: {
+        '&.meta-definition-property': {color: color.property},
         '&.atrule': {color: color.atrule},
         '&.attr-name': {color: color.attrName},
         '&.attr-value': {color: color.attrValue},
@@ -107,21 +108,22 @@ const CodeText = styled(Text)({
   },
 })
 
-const LANGUAGES: Record<string, string> = {
-  js: 'jsx',
-  javascript: 'jsx',
-  typescript: 'ts',
-}
+// const LANGUAGES: Record<string, string> = {
+//   js: 'jsx',
+//   javascript: 'jsx',
+//   typescript: 'ts',
+// }
 
-export function Code(props: {children: string; language?: string; size?: number | number[]}) {
-  const {children, language, size} = props
-  const refractorLanguage = language && LANGUAGES[language]
+export function Code(props: {children: React.ReactNode; size?: number | number[]}) {
+  const {children, size} = props
+  // const refractorLanguage = language && LANGUAGES[language]
 
   return (
     <Root data-testid="code">
       <CodeText data-testid="code__text" size={size as any}>
-        {refractorLanguage && <Refractor inline language={refractorLanguage} value={children} />}
-        {!refractorLanguage && children}
+        {children}
+        {/* {refractorLanguage && <Refractor inline language={refractorLanguage} value={children} />}
+        {!refractorLanguage && children} */}
       </CodeText>
     </Root>
   )

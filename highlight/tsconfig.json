@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.settings",
+  "include": ["./scripts", "./src", "./test"],
+  "compilerOptions": {
+    "rootDir": "../",
+    "outDir": "./lib/dts/",
+    "module": "ES2020",
+    "noEmit": true,
+    "resolveJsonModule": true
+  }
+}
